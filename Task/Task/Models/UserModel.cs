@@ -1,7 +1,9 @@
+using System.Collections.Generic;
+
 namespace Task
 {
     public class UserModel
     {
-        public User User { get; set; }
+        public List<User> User { get; set; }
     }
 }
