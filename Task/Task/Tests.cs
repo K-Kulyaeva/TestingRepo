@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using NUnit.Framework;
 
 namespace Task
@@ -6,10 +6,12 @@ namespace Task
     [TestFixture]
     public class Tests
     {
+        private const string path = "/Resources/Users.json";
+            
         [Test]
         public void Test1()
         {
-            Assert.True(true);
+            DataReader DataReader = new DataReader();
         }
     }
 }

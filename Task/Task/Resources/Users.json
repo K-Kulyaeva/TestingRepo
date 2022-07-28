@@ -1,0 +1,8 @@
+{
+  "users": [
+    { "name":"Kim", "city":"LA", "id": 1, "userID" : 11},
+    { "name":"Chloe", "city":"LA", "id": 2, "userID" : 12},
+    { "name":"Kanye", "city":"NY","id": 3, "userID" : 13 },
+    { "name":"Kylie", "city":"LA","id": 4, "userID" : 14  }
+  ]
+}
