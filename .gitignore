@@ -1,0 +1,14 @@
+.DS_Store
+Task/Task/bin/
+Task/Task/obj/
+Task/packages
+Task/.vs
+Task/obj/
+/.DS_Store
+Task/Log/
+Task/.idea/
+Task/Task/obj/
+Task/Task/Properties/
+Task/.idea/
+Task/Task/obj/Debug/
+
