@@ -1,29 +1,27 @@
+using System;
 using System.Collections.Generic;
-using Aquality.Selenium.Core.Configurations;
-using NUnit.Framework;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace Task
 {
-    public class DataReader : ISettingsFile
+    public static class DataReader 
     {
-        public T GetValue<T>(string path)
+        public static T ReadJsonAPI<T>(string json)
         {
-            throw new System.NotImplementedException();
+            return JsonConvert.DeserializeObject<T>(json);
         }
 
-        public List GetValueList<T>(string path)
+        public static T ReadJson<T>(string pathToFile)
         {
-            throw new System.NotImplementedException();
+            var json = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + pathToFile);
+            return JsonConvert.DeserializeObject<T>(json);
         }
-
-        public IReadOnlyDictionary<string, T> GetValueDictionary<T>(string path)
+        
+        public static List<T> ReadJsonList<T>(string pathToFile)
         {
-            throw new System.NotImplementedException();
-        }
-
-        public bool IsValuePresent(string path)
-        {
-            throw new System.NotImplementedException();
+            var json = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + pathToFile);
+            return JsonConvert.DeserializeObject<List<T>>(json);
         }
     }
 }
